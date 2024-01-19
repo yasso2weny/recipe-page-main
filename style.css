@@ -1,0 +1,149 @@
+:root {
+  --header-primary: hsl(14, 45%, 36%);
+  --header-secondary: hsl(332, 51%, 32%);
+
+  --bg-primary: #f3e5d8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #fff7fc;
+
+  --paragraph: hsl(30, 10%, 34%);
+}
+
+@font-face {
+  font-family: "font-primary";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "font-secondary";
+  src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  margin: 0;
+  background-color: var(--bg-primary);
+  font-family: "font-primary", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 45.3125rem;
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+  padding: 1.875rem;
+  margin: 1.25rem;
+}
+
+main img {
+  border-radius: 20px;
+}
+
+h1 {
+  letter-spacing: 2px;
+  margin-top: 1.875rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: var(--header-primary);
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: var(--header-secondary);
+}
+
+hr {
+  border: 1px solid var(--paragraph);
+  width: 40.625rem;
+}
+
+p,
+h3,
+li,
+td {
+  font-family: "font-secondary", sans-serif;
+}
+
+li::marker {
+  color: var(--header-primary);
+  font-weight: bold;
+}
+
+.ingredients li {
+  margin: 0.25rem 0 0.5rem 0;
+  color: var(--paragraph);
+}
+
+.instructions li {
+  margin: 0.25rem 0 0.5rem 0;
+  color: var(--paragraph);
+  line-height: 25px;
+}
+
+.prep-time {
+  background-color: var(--bg-tertiary);
+  border-radius: 20px;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
+  box-sizing: border-box;
+}
+
+.prep-time li {
+  margin: 0.25rem 0 0.5rem 0;
+  color: var(--paragraph);
+}
+
+/* Table */
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid var(--paragraph);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  color: var(--paragraph);
+  padding: 0.625rem 0 0.625rem 1.25rem;
+}
+
+#td-special {
+  color: var(--header-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  main img {
+    border-radius: 0;
+    margin: -1.875rem -1.875rem 0 -1.875rem;
+  }
+
+  hr {
+    width: 18.75rem;
+  }
+}
